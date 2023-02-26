@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete End to End Face recognition web app developed in Python and created web app in Django then Deployed in Django website in Heroku app Cloud">
+    <title>Face Recognition Course and Django|Convolution Academy|</title>
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="../assets/css/lightbox.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/convolution_logos/convolution_crop_purple.svg">
+</head>
+<body>
+    <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <!-- <a href="#"><em>L</em>ARN</a> -->
+      <img src="../assets/images/convolution_logos/logo_horizontal_purple_text_new_crop_2.svg" class="image-fluid" width="190" alt="">
+    </div>
+  </header>
+
+  <section class="container course-background">
+    <div>
+
+    </div>
+    <div class="d-flex justify-content-center">
+        <img src="../assets/course/face_recognition_django_750.jpg" 
+            alt="Develop and Deploy Face Recognition with ML and Django Course"
+            class="image-fluid" widht=750>
+    </div>
+    <div class="d-flex justify-content-center">
+        <h3>Deploy Face Recognition Web App with ML in Django</h3>
+    </div>
+    <div class="d-flex justify-content-center">
+        <p>Develop & Deploy Face Recognition, Facial Emotion using OpenCV,
+            Machine Learning, Django & Database in Python in Heroku</p>
+    </div>
+    <div class="d-flex justify-content-center">
+        <h3>Please wait while we redirect to the page</h3>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-row">
+            <div class="p-2">
+                <div class="loader"></div>
+            </div>
+            <div class="p-2">
+                <div id="counter" style="padding-top: 30%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .course-background {
+        padding-top: 100px;
+    }
+    .course-background img{
+        border-radius: 10px;
+    }
+    .loader {
+        border: 20px solid #eee; /* Light grey */
+        border-top: 20px solid #8155BA; /* Blue */
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        animation: spin 2s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+</style>
+    <script>
+        var countdown = new Date().getTime();
+        var setSeconds = 15;
+        setInterval(function(){
+            var now = new Date().getTime();
+            var difference = now - countdown;
+
+            var seconds = Math.floor((difference % (1000*60))/1000);
+            var seconds_diff = setSeconds - seconds
+            document.getElementById("counter").innerHTML = "<h3>"+seconds_diff + ' s'+"</h3>"
+            if (seconds_diff <= 2) {
+                console.log('time up')
+                window.location.href = "https://www.udemy.com/course/complete-face-recognition-app-machine-learning-django-heroku/"
+
+            }
+        },1000)
+
+    </script>
+</body>
+</html>
